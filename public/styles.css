@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; display: grid; place-items: center;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #f3f4f6; color: #111827; padding: 16px;
+}
+.card {
+  background: #fff; max-width: 420px; width: 100%; padding: 32px;
+  border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,.08);
+}
+h1 { font-size: 1.4rem; margin-top: 0; }
+.actions { display: grid; gap: 12px; margin: 20px 0; }
+.btn {
+  display: block; text-align: center; padding: 12px; border-radius: 8px;
+  border: 1px solid #d1d5db; background: #fff; color: #111827;
+  text-decoration: none; font-weight: 600; cursor: pointer; width: 100%; font-size: 1rem;
+}
+.btn.github { background: #24292f; color: #fff; border-color: #24292f; }
+.btn:hover { filter: brightness(.95); }
+.note { font-size: .85rem; color: #6b7280; }
+[hidden] { display: none !important; }
