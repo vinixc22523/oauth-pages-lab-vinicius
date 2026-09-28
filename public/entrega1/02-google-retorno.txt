@@ -1,1 +1,1 @@
-https://SEU-PROJETO.pages.dev/oauth/callback/google
+https://oauth-pages-lab-vinicius.pages.dev/oauth/callback/google

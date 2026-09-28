@@ -1,2 +1,2 @@
-Homepage URL: https://SEU-PROJETO.pages.dev
-Authorization callback URL: https://SEU-PROJETO.pages.dev/oauth/callback/github
+Homepage URL: https://oauth-pages-lab-vinicius.pages.dev
+Authorization callback URL: https://oauth-pages-lab-vinicius.pages.dev/oauth/callback/github
