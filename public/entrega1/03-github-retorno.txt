@@ -1,0 +1,2 @@
+Homepage URL: https://SEU-PROJETO.pages.dev
+Authorization callback URL: https://SEU-PROJETO.pages.dev/oauth/callback/github
