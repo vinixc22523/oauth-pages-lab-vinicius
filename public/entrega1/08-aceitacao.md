@@ -1,6 +1,6 @@
 # Critérios de aceitação
 
-Projeto: https://SEU-PROJETO.pages.dev
+Projeto: https://oauth-pages-lab-vinicius.pages.dev
 Assinado por: SEU NOME, NOME DO COLEGA DE DUPLA
 Data: AAAA-MM-DD
 

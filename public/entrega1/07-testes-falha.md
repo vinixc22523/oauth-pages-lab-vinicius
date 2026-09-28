@@ -1,6 +1,6 @@
 # Testes de falha
 
-Projeto: https://SEU-PROJETO.pages.dev
+Projeto: https://oauth-pages-lab-vinicius.pages.dev
 Data de execução: AAAA-MM-DD
 Responsável: SEU NOME
 
@@ -34,7 +34,7 @@ Responsável: SEU NOME
 
 ## Caso 5: origem inválida na saída
 
-- **Preparação:** sessão válida aberta em URL_BASE. Em outra aba, em https://example.com, foi executado no console: `fetch("https://SEU-PROJETO.pages.dev/oauth/logout", { method: "POST", credentials: "include" })`.
+- **Preparação:** sessão válida aberta em URL_BASE. Em outra aba, em https://example.com, foi executado no console: `fetch("https://oauth-pages-lab-vinicius.pages.dev/oauth/logout", { method: "POST", credentials: "include" })`.
 - **Pedido enviado:** `POST /oauth/logout` com `Origin: https://example.com`.
 - **Resultado esperado:** HTTP 403 `{"error":"invalid_origin"}`. A sessão original continua válida (`/api/me` responde 200 na aba de URL_BASE).
 - **Resultado observado:** PREENCHER
