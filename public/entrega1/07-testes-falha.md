@@ -1,7 +1,7 @@
 # Testes de falha
 
 Projeto: https://oauth-pages-lab-vinicius.pages.dev
-Data de execução: 2026-09-28
+Data de execução: 2026-09-28 e 2026-09-30
 Responsável: SEU NOME
 
 ## Caso 1: retorno sem cookie temporário
@@ -23,7 +23,7 @@ Responsável: SEU NOME
 - **Preparação:** login concluído com sucesso. URL da requisição de retorno copiada no painel Network (Copy URL) e aberta novamente.
 - **Pedido enviado:** `GET /oauth/callback/{provedor}?code=[REMOVIDO]&state=[REMOVIDO]` repetido.
 - **Resultado esperado:** HTTP 400 `{"error":"missing_transaction"}` ou `{"error":"invalid_transaction"}`, pois a transação já foi apagada do D1.
-- **Resultado observado:** PREENCHER
+- **Resultado observado:** HTTP 400 `{"error":"missing_transaction"}`. A transação e o cookie temporário já tinham sido removidos na primeira conclusão, então a repetição foi recusada e nenhuma nova sessão foi criada. Resultado conforme o esperado.
 
 ## Caso 4: sessão expirada
 
@@ -44,4 +44,4 @@ Responsável: SEU NOME
 - **Preparação:** valor do cookie `__Host-session` copiado temporariamente. Logout executado. Cookie restaurado manualmente nas ferramentas de desenvolvimento. A cópia foi apagada logo depois.
 - **Pedido enviado:** `GET /api/me` com o cookie `__Host-session=[REMOVIDO]` restaurado.
 - **Resultado esperado:** HTTP 401 `{"error":"unauthenticated"}`, pois a linha foi removida do D1.
-- **Resultado observado:** PREENCHER
+- **Resultado observado:** HTTP 401 `{"error":"unauthenticated"}`. Como a linha da sessão foi removida do D1 no logout, o cookie restaurado não recuperou a sessão. A cópia do valor foi apagada logo depois do teste. Resultado conforme o esperado.
