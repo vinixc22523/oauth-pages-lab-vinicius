@@ -1,0 +1,10 @@
+# Usado pelo wrangler para aplicar as migracoes D1 (workflow migrar.yml).
+# Sem pages_build_output_dir de proposito: assim o Cloudflare Pages ignora
+# este arquivo e continua usando as variaveis e bindings do painel.
+name = "oauth-pages-lab-vinicius"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "oauth-sessions-vinicius"
+database_id = "31621e0f-d648-41f8-8b43-9fa155a436b5"
+migrations_dir = "migrations"
