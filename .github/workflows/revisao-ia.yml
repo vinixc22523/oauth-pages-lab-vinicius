@@ -34,6 +34,8 @@ jobs:
         with:
           prompt-file: prompt.txt
           system-prompt: Você é um revisor de código objetivo.
+          # gpt-4.1 (padrao da acao) nao esta disponivel no plano; vazio = modelo padrao do Copilot CLI
+          model: ''
       - name: Comenta no PR
         env:
           GH_TOKEN: ${{ github.token }}
