@@ -27,12 +27,15 @@ jobs:
             echo '```'
           } > prompt.txt
       - id: ia
-        uses: actions/ai-inference@v1
+        # @v1 aponta para a versao antiga (GitHub Models), que ignora o COPILOT_GITHUB_TOKEN.
+        uses: actions/ai-inference@v3
         env:
           COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_PAT }}
         with:
           prompt-file: prompt.txt
           system-prompt: Você é um revisor de código objetivo.
+          # gpt-4.1 (padrao da acao) nao esta disponivel no plano; vazio = modelo padrao do Copilot CLI
+          model: ''
       - name: Comenta no PR
         env:
           GH_TOKEN: ${{ github.token }}

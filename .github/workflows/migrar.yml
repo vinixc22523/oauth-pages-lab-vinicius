@@ -32,12 +32,14 @@ jobs:
             git diff --name-only ${{ github.event.before }} ${{ github.sha }} -- migrations/ || true
           } > prompt-resumo.txt
       - id: resumo
-        uses: actions/ai-inference@v1
+        # @v1 aponta para a versao antiga (GitHub Models), que ignora o COPILOT_GITHUB_TOKEN.
+        uses: actions/ai-inference@v3
         env:
           COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_PAT }}
         with:
           prompt-file: prompt-resumo.txt
           system-prompt: Você resume mudanças de banco de dados de forma objetiva.
+          model: ''
       - name: Escreve o resumo na execução
         run: |
           echo "## Resumo das migrações (IA)" >> "$GITHUB_STEP_SUMMARY"
