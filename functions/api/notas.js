@@ -10,7 +10,8 @@ export async function onRequest(context) {
   const nome = new URL(request.url).searchParams.get("aluno");
   if (!nome) return fail(400, "aluno ausente");
 
-  const { results } = await env.DB.prepare(`SELECT * FROM notas WHERE aluno = '${nome}'`).all();
+  // O valor vai como parametro (bind), nunca concatenado no SQL.
+  const { results } = await env.DB.prepare("SELECT * FROM notas WHERE aluno = ?").bind(nome).all();
 
   return json({ aluno: nome, notas: results });
 }
