@@ -27,7 +27,8 @@ jobs:
             echo '```'
           } > prompt.txt
       - id: ia
-        uses: actions/ai-inference@v1
+        # @v1 aponta para a versao antiga (GitHub Models), que ignora o COPILOT_GITHUB_TOKEN.
+        uses: actions/ai-inference@v3
         env:
           COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_PAT }}
         with:
