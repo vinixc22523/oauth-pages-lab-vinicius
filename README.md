@@ -10,5 +10,3 @@ Laboratório de login OAuth/OIDC no Cloudflare Pages
 | `migrar.yml` | `push` na `main` que altera `migrations/` | aplica as migrações no D1 remoto e resume o resultado com IA |
 
 A `main` é protegida: só recebe mudanças por PR com o check `verificar` aprovado.
-# oauth-pages-lab-vinicius
-Laboratório de login OAuth/OIDC no Cloudflare Pages
