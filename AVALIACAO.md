@@ -1,5 +1,7 @@
 # Avaliação: GitHub Actions com IA
 
+Dupla: Vinicius Kichel Derganho (RA 2026107869) e Bruno Augusto (RA 2026107709)
+
 Repositório: https://github.com/vinixc22523/oauth-pages-lab-vinicius
 Site: Cloudflare Pages + Functions + D1 (`oauth-sessions-vinicius`), login OAuth.
 
